@@ -1,0 +1,19 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+#hero-bg {
+  background-size: cover;
+  background-position: center;
+}
+    
+@keyframes colorCycle {
+  0%   { background-color: #facc15; }  /* Yellow */
+  25%  { background-color: #34d399; }  /* Green */
+  50%  { background-color: #60a5fa; }  /* Blue */
+  75%  { background-color: #f472b6; }  /* Pink */
+  100% { background-color: #facc15; }  /* Back to Yellow */
+}
+
+.animate-color-cycle {
+  animation: colorCycle 10s infinite;
+}
