@@ -11,55 +11,39 @@
   <!-- Font & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="bg-gray-950 text-white font-[Poppins]">
+<body class="bg-sky-50 text-gray-800 font-[Poppins]">
 
-      <!-- Navbar -->
-<nav class="bg-gray-900 shadow-lg fixed w-full top-0 z-50">
+<!-- Navbar -->
+<nav class="bg-white shadow-lg fixed w-full top-0 z-50 text-gray-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
-      
-      <!-- Logo -->
-      <div class="flex-shrink-0 text-yellow-400 text-xl sm:text-2xl font-semibold">
-        Tour & Safari
-      </div>
-
-      <!-- Navigation Links -->
+      <div class="flex-shrink-0 text-amber-500 text-xl sm:text-2xl font-semibold">Tour & Safari</div>
       <div class="hidden md:flex items-center space-x-4 text-sm lg:text-base">
-        <a href="index.html" class="hover:text-yellow-400" data-key="home">Home</a>
-        <a href="about.html" class="hover:text-yellow-400" data-key="about">About</a>
-        <a href="contact.html" class="hover:text-yellow-400" data-key="contact">Contact</a>
-        <a href="dest.html" class="hover:text-yellow-400" data-key="destinations">Destinations</a>
-        <a href="blogs.html" class="hover:text-yellow-400" data-key="blogs">Blogs </a>
+        <a href="index.html" class="hover:text-amber-500">Home</a>
+        <a href="about.html" class="hover:text-amber-500">About</a>
+        <a href="contact.html" class="hover:text-amber-500">Contact</a>
+        <a href="dest.html" class="hover:text-amber-500">Destinations</a>
+        <a href="blogs.html" class="hover:text-amber-500">Blogs</a>
       </div>
-
-      <!-- Language & CTA -->
       <div class="flex items-center gap-3">
         <div class="flex gap-2">
           <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5 cursor-pointer" id="lang-en">
           <img src="https://flagcdn.com/w20/de.png" alt="German" class="w-5 h-5 cursor-pointer" id="lang-de">
         </div>
-        <a href="#booking" class="bg-yellow-500 text-gray-900 font-semibold py-1 px-3 rounded hover:bg-yellow-400 transition hover:text-yellow-400 text-xs sm:text-sm hidden md:inline-block">
-          Book Now
-        </a>
+        <a href="#booking" class="bg-amber-500 text-white font-semibold py-1 px-3 rounded hover:bg-amber-400 transition text-xs sm:text-sm hidden md:inline-block">Book Now</a>
       </div>
-
     </div>
   </div>
 </nav>
 
-
-
 <!-- Main Section with Image and Text -->
-<section class="relative h-72 md:h-96 overflow-hidden">
+<section class="relative h-72 md:h-96 overflow-hidden mt-16">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTHI98uSJyLPY7WDJaHEehJ-5Vjz8Vv9m7Hw&s" alt="Contact Travel" class="absolute inset-0 w-full h-full object-cover opacity-70" />
   <div class="relative z-10 flex items-center justify-center h-full text-center px-4">
     <div>
-      <h2 class="text-4xl font-bold text-yellow-400 mb-4">Let’s Get You Moving</h2>
-      <p class="text-white text-lg max-w-xl mx-auto">
+      <h2 class="text-4xl font-bold text-amber-500 mb-4">Let’s Get You Moving</h2>
+      <p class="text-gray-800 text-lg max-w-xl mx-auto bg-white bg-opacity-70 p-4 rounded-lg">
         Whether you're heading to Alexandria or planning a desert escape, our team is ready to assist you. Reach out and let’s make your journey smooth and unforgettable.
       </p>
     </div>
@@ -68,86 +52,58 @@
 
 <!-- Contact Form -->
 <section class="py-12 px-4 max-w-4xl mx-auto">
-  <form class="bg-gray-900 p-8 rounded-xl shadow-2xl space-y-6">
+  <form class="bg-white p-8 rounded-xl shadow-md space-y-6">
 
-    <!-- Message -->
-    <textarea placeholder="Write your message..." class="w-full h-40 p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 resize-none transition duration-300 hover:scale-105 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+    <textarea placeholder="Write your message..." class="w-full h-40 p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 resize-none transition duration-300 hover:scale-105 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
 
-    <!-- Name -->
-    <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 transition duration-300 hover:rotate-1 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+    <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 transition duration-300 hover:rotate-1 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500" />
 
-    <!-- Phone -->
     <div class="flex gap-4">
-      <input type="text" placeholder="+20" class="w-1/4 p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 transition duration-300 hover:translate-x-1 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-      <input type="text" placeholder="Phone Number" class="w-3/4 p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 transition duration-300 hover:scale-105 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+      <input type="text" placeholder="+20" class="w-1/4 p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 transition duration-300 hover:translate-x-1 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500" />
+      <input type="text" placeholder="Phone Number" class="w-3/4 p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 transition duration-300 hover:scale-105 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500" />
     </div>
 
-    <!-- Email -->
-    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 transition duration-300 hover:-translate-y-1 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 transition duration-300 hover:-translate-y-1 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500" />
 
-    <!-- Submit Button -->
-<!-- Submit Button – Centered with Color Animation -->
-<div class="flex justify-center mt-8">
-  <a href="#"
-     class="inline-block text-gray-900 font-bold px-10 py-5 rounded-xl shadow-lg text-lg transition-all duration-300 hover:scale-105 animate-color-cycle"
-     style="background-color: #facc15;">
-    Submit Button
-  </a>
-</div>
-
-
-
+    <div class="flex justify-center mt-8">
+      <a href="#" class="inline-block text-white font-bold px-10 py-5 rounded-xl shadow-lg text-lg transition-all duration-300 hover:scale-105 bg-amber-500 hover:bg-amber-400">
+        Submit
+      </a>
+    </div>
 
   </form>
 </section>
 
-</section>
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Footer -->
-  <footer class="bg-gray-950 py-12 text-center text-white mt-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-center gap-8 mb-6 text-2xl">
-        <a href="#"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-instagram text-pink-500 hover:text-pink-400 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-facebook text-blue-500 hover:text-blue-400 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-telegram text-cyan-400 hover:text-cyan-300 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-twitter text-sky-400 hover:text-sky-300 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-youtube text-red-500 hover:text-red-400 transition hover:text-yellow-400"></i></a>
-      </div>
-      <div class="text-sm text-gray-400 leading-relaxed space-y-2">
-        <p>&copy; 2025 <span class="text-yellow-400 font-semibold">Tour & Safari</span>. All rights reserved.</p>
-        <p>Website designed by <a href="/admin" class="text-yellow-400 underline hover:text-yellow-300">admin</a></p>
-      </div>
+<!-- Footer -->
+<footer class="bg-sky-100 py-12 text-center text-gray-700 mt-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-center gap-8 mb-6 text-2xl">
+      <a href="#"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition"></i></a>
+      <a href="#"><i class="fab fa-instagram text-pink-500 hover:text-pink-400 transition"></i></a>
+      <a href="#"><i class="fab fa-facebook text-blue-500 hover:text-blue-400 transition"></i></a>
+      <a href="#"><i class="fab fa-telegram text-cyan-400 hover:text-cyan-300 transition"></i></a>
+      <a href="#"><i class="fab fa-twitter text-sky-400 hover:text-sky-300 transition"></i></a>
+      <a href="#"><i class="fab fa-youtube text-red-500 hover:text-red-400 transition"></i></a>
     </div>
+    <div class="text-sm text-gray-600 leading-relaxed space-y-2">
+      <p>&copy; 2025 <span class="text-amber-500 font-semibold">Tour & Safari</span>. All rights reserved.</p>
+      <p>Website designed by <a href="/admin" class="text-amber-500 underline hover:text-amber-400">admin</a></p>
+    </div>
+  </div>
 
-    <!-- Floating Contact Icons -->
-<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-  <!-- Phone Icon -->
-  <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
-    <i class="fas fa-phone text-white text-2xl"></i>
-  </a>
+  <!-- Floating Contact Icons -->
+  <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+    <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
+      <i class="fas fa-phone text-white text-2xl"></i>
+    </a>
+    <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
+      <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+  </div>
+</footer>
 
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
-    <i class="fab fa-whatsapp text-white text-2xl"></i>
-  </a>
-</div>
-
-  </footer>
-
-
-  <!-- Scripts -->
-  <script src="../js/app.js"></script>
-  <script src="../js/translate.js"></script>
+<!-- Scripts -->
+<script src="../js/app.js"></script>
+<script src="../js/translate.js"></script>
 </body>
 </html>

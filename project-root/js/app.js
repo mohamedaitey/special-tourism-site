@@ -18,6 +18,7 @@ setInterval(() => {
 // Initial render
 renderCards(bazaars);
 
+
 // Language translation
 async function loadLanguage(lang) {
   try {

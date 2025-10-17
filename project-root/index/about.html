@@ -11,127 +11,121 @@
   <!-- Font & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body class="bg-gray-950 text-white font-[Poppins]">
 
-      <!-- Navbar -->
-<nav class="bg-gray-900 shadow-lg fixed w-full top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      
-      <!-- Logo -->
-      <div class="flex-shrink-0 text-yellow-400 text-xl sm:text-2xl font-semibold">
-        Tour & Safari
-      </div>
+<body class="bg-sky-50 text-gray-800 font-[Poppins]">
 
-      <!-- Navigation Links -->
-      <div class="hidden md:flex items-center space-x-4 text-sm lg:text-base">
-        <a href="index.html" class="hover:text-yellow-400" data-key="home">Home</a>
-        <a href="about.html" class="hover:text-yellow-400" data-key="about">About</a>
-        <a href="contact.html" class="hover:text-yellow-400" data-key="contact">Contact</a>
-        <a href="dest.html" class="hover:text-yellow-400" data-key="destinations">Destinations</a>
-        <a href="blogs.html" class="hover:text-yellow-400" data-key="blogs">Blogs </a>
-      </div>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
 
-      <!-- Language & CTA -->
-      <div class="flex items-center gap-3">
-        <div class="flex gap-2">
-          <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5 cursor-pointer" id="lang-en">
-          <img src="https://flagcdn.com/w20/de.png" alt="German" class="w-5 h-5 cursor-pointer" id="lang-de">
+        <!-- Logo -->
+        <div class="flex-shrink-0 text-amber-500 text-xl sm:text-2xl font-semibold">
+          Tour & Safari
         </div>
-        <a href="#booking" class="bg-yellow-500 text-gray-900 font-semibold py-1 px-3 rounded hover:bg-yellow-400 transition hover:text-yellow-400 text-xs sm:text-sm hidden md:inline-block">
-          Book Now
-        </a>
-      </div>
 
+        <!-- Navigation Links -->
+        <div class="hidden md:flex items-center space-x-6 text-sm lg:text-base">
+          <a href="index.html" class="hover:text-amber-500">Home</a>
+          <a href="about.html" class="text-amber-500 font-semibold">About</a>
+          <a href="contact.html" class="hover:text-amber-500">Contact</a>
+          <a href="dest.html" class="hover:text-amber-500">Destinations</a>
+          <a href="blogs.html" class="hover:text-amber-500">Blogs</a>
+        </div>
+
+        <!-- Language & CTA -->
+        <div class="flex items-center gap-3">
+          <div class="flex gap-2">
+            <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5 cursor-pointer" id="lang-en">
+            <img src="https://flagcdn.com/w20/de.png" alt="German" class="w-5 h-5 cursor-pointer" id="lang-de">
+          </div>
+          <a href="#booking" class="bg-amber-500 text-white font-semibold py-1 px-3 rounded hover:bg-amber-400 transition text-xs sm:text-sm hidden md:inline-block">
+            Book Now
+          </a>
+        </div>
+
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="relative h-[80vh] flex items-center justify-center text-center overflow-hidden">
+  <section class="relative h-[80vh] flex items-center justify-center text-center overflow-hidden mt-16">
     <img src="https://desertbuggyrental.com/wp-content/uploads/2024/11/Abu-Dhabi-landmarks.jpg" alt="Safari Background" class="absolute inset-0 w-full h-full object-cover opacity-60" />
-    <div class="relative z-10">
-      <h1 class="text-4xl sm:text-5xl font-bold text-yellow-400 mb-4" data-key="about_hero_title">Who We Are</h1>
-      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-white" data-key="about_hero_subtitle">
+    <div class="relative z-10 bg-white/70 p-6 rounded-xl shadow-lg">
+      <h1 class="text-4xl sm:text-5xl font-bold text-amber-500 mb-4" data-key="about_hero_title">Who We Are</h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-700" data-key="about_hero_subtitle">
         Discover the spirit of travel with a company that blends adventure, comfort, and innovation.
       </p>
     </div>
   </section>
 
-  <!-- About Content 2-->
-  <section class="bg-gray-950 text-white py-20 px-4">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-    
-    <!-- Image -->
-    <div class="relative group overflow-hidden rounded-lg shadow-lg">
-      <img src="https://egyptunitedtours.com/wp-content/uploads/2025/08/egypt-landmarks-and-attractions.webp" alt="Safari Trip Hurghada" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500" />
-      <div class="absolute bottom-4 left-4 flex gap-4">
-        
-
-      </div>
-    </div>
-
-    <!-- Text -->
-    <div class="text-center md:text-left">
-      <h2 class="text-3xl font-bold mb-6" data-key="about_title">About Our Company</h2>
-      <p class="text-gray-300 text-lg leading-relaxed mb-6" data-key="about_quote">
-        We strive to elevate service quality by blending innovation, simplicity, and technology—delivering seamless travel solutions that truly serve our customers.
-      </p>
-      <a href="contact.html" class="inline-block bg-yellow-500 text-gray-900 font-semibold py-2 px-6 rounded hover:bg-yellow-400 transition">
-        Contact Us
-      </a>
-    </div>
-
-  </div>
-</section>
-
   <!-- About Content -->
+  <section class="py-20 px-4 bg-sky-50">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <!-- Image -->
+      <div class="relative group overflow-hidden rounded-lg shadow-lg">
+        <img src="https://egyptunitedtours.com/wp-content/uploads/2025/08/egypt-landmarks-and-attractions.webp" alt="Safari Trip Hurghada" class="w-full h-80 object-cover transform group-hover:scale-105 transition duration-500" />
+      </div>
+
+      <!-- Text -->
+      <div class="text-center md:text-left">
+        <h2 class="text-3xl font-bold text-amber-500 mb-6" data-key="about_title">About Our Company</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6" data-key="about_quote">
+          We strive to elevate service quality by blending innovation, simplicity, and technology—delivering seamless travel solutions that truly serve our customers.
+        </p>
+        <a href="contact.html" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">
+          Contact Us
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Mission Section -->
   <section class="py-20 px-4 max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6" data-key="about_section_title">Our Mission</h2>
-    <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto" data-key="about_section_text">
+    <h2 class="text-3xl font-bold text-amber-500 mb-6" data-key="about_section_title">Our Mission</h2>
+    <p class="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto" data-key="about_section_text">
       We are passionate about crafting unforgettable travel experiences across Egypt, Saudi Arabia, and the UAE.  
       Our mission is to simplify your journey through smart solutions, personalized service, and a touch of magic in every destination.
     </p>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-950 py-12 text-center text-white mt-20">
+  <footer class="bg-white py-12 text-center text-gray-800 mt-20 shadow-inner">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex justify-center gap-8 mb-6 text-2xl">
-        <a href="#"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-instagram text-pink-500 hover:text-pink-400 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-facebook text-blue-500 hover:text-blue-400 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-telegram text-cyan-400 hover:text-cyan-300 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-twitter text-sky-400 hover:text-sky-300 transition hover:text-yellow-400"></i></a>
-        <a href="#"><i class="fab fa-youtube text-red-500 hover:text-red-400 transition hover:text-yellow-400"></i></a>
+        <a href="#"><i class="fab fa-whatsapp text-green-500 hover:text-amber-500 transition"></i></a>
+        <a href="#"><i class="fab fa-instagram text-pink-500 hover:text-amber-500 transition"></i></a>
+        <a href="#"><i class="fab fa-facebook text-blue-500 hover:text-amber-500 transition"></i></a>
+        <a href="#"><i class="fab fa-telegram text-sky-500 hover:text-amber-500 transition"></i></a>
+        <a href="#"><i class="fab fa-twitter text-sky-400 hover:text-amber-500 transition"></i></a>
+        <a href="#"><i class="fab fa-youtube text-red-500 hover:text-amber-500 transition"></i></a>
       </div>
-      <div class="text-sm text-gray-400 leading-relaxed space-y-2">
-        <p>&copy; 2025 <span class="text-yellow-400 font-semibold">Tour & Safari</span>. All rights reserved.</p>
-        <p>Website designed by <a href="/admin" class="text-yellow-400 underline hover:text-yellow-300">admin</a></p>
+      <div class="text-sm text-gray-600 leading-relaxed space-y-2">
+        <p>&copy; 2025 <span class="text-amber-500 font-semibold">Tour & Safari</span>. All rights reserved.</p>
+        <p>Website designed by <a href="/admin" class="text-amber-500 underline hover:text-amber-400">admin</a></p>
       </div>
     </div>
 
     <!-- Floating Contact Icons -->
-<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-  <!-- Phone Icon -->
-  <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
-    <i class="fas fa-phone text-white text-2xl"></i>
-  </a>
+    <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+      <!-- Phone Icon (Blue) -->
+      <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
+        <i class="fas fa-phone text-white text-2xl"></i>
+      </a>
 
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
-    <i class="fab fa-whatsapp text-white text-2xl"></i>
-  </a>
-</div>
-
+      <!-- WhatsApp Icon -->
+      <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+      </a>
+    </div>
   </footer>
-
 
   <!-- Scripts -->
   <script src="../js/app.js"></script>
   <script src="../js/translate.js"></script>
+
 </body>
 </html>

@@ -3,221 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tour & Safari</title>
+  <title>Egypt - Tour & Safari</title>
 
-  <!-- Tailwind CSS CDN -->
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome CDN -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Poppins Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body class="bg-gray-950 text-white font-[Poppins]">
-  <!-- Navbar -->
-<nav class="bg-gray-900 shadow-lg fixed w-full top-0 z-50">
+<body class="bg-sky-50 text-gray-800 font-[Poppins]">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-lg fixed w-full top-0 z-50 text-gray-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
-      
-      <!-- Logo -->
-      <div class="flex-shrink-0 text-yellow-400 text-xl sm:text-2xl font-semibold">
-        Tour & Safari
-      </div>
-
-      <!-- Navigation Links -->
+      <div class="flex-shrink-0 text-amber-500 text-xl sm:text-2xl font-semibold">Tour & Safari</div>
       <div class="hidden md:flex items-center space-x-4 text-sm lg:text-base">
-        <a href="index.html" class="hover:text-yellow-400" data-key="home">Home</a>
-        <a href="about.html" class="hover:text-yellow-400" data-key="about">About</a>
-        <a href="contact.html" class="hover:text-yellow-400" data-key="contact">Contact</a>
-        <a href="dest.html" class="hover:text-yellow-400" data-key="destinations">Destinations</a>
-        <a href="blogs.html" class="hover:text-yellow-400" data-key="blogs">Blogs </a>
-
+        <a href="index.html" class="hover:text-amber-500">Home</a>
+        <a href="about.html" class="hover:text-amber-500">About</a>
+        <a href="contact.html" class="hover:text-amber-500">Contact</a>
+        <a href="dest.html" class="hover:text-amber-500">Destinations</a>
+        <a href="blogs.html" class="hover:text-amber-500">Blogs</a>
       </div>
-
-      <!-- Language & CTA -->
       <div class="flex items-center gap-3">
         <div class="flex gap-2">
           <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5 cursor-pointer" id="lang-en">
           <img src="https://flagcdn.com/w20/de.png" alt="German" class="w-5 h-5 cursor-pointer" id="lang-de">
         </div>
-        <a href="#" class="bg-yellow-500 text-gray-900 font-semibold py-1 px-3 rounded hover:bg-yellow-400 transition hover:text-yellow-400 text-xs sm:text-sm hidden md:inline-block">
-          Book Now
-        </a>
+        <a href="#" class="bg-amber-500 text-white font-semibold py-1 px-3 rounded hover:bg-amber-400 transition text-xs sm:text-sm hidden md:inline-block">Book Now</a>
       </div>
-
     </div>
   </div>
 </nav>
 
+<!-- Egypt Tours Section -->
+<div class="pt-24 pb-16 px-6 max-w-7xl mx-auto">
+  <h1 class="text-center text-3xl font-bold text-amber-500 mb-12">Discover Egypt</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-12 px-4 max-w-7xl mx-auto">
-
-  <!-- Card 1 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg" alt="Giza Bazaar" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Giza Bazaar</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">EGP 1500</span></div>
-        <div>👥 <span class="text-white font-medium">4 People</span></div>
+    <!-- Card 1 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-amber-500/30 transition group">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg" alt="Giza Bazaar" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
+      <div class="p-4 text-center">
+        <h3 class="text-xl font-bold text-amber-500 mb-2">Giza Bazaar</h3>
+        <div class="flex justify-center gap-6 text-sm text-gray-700 mb-4">
+          <div>💰 <span class="text-amber-500 font-semibold">EGP 1500</span></div>
+          <div>👥 <span class="font-medium">4 People</span></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Card 2 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Al-Balad_Jeddah_Saudi_Arabia.jpg" alt="Jeddah Old Town" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Jeddah Old Town</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">SAR 180</span></div>
-        <div>👥 <span class="text-white font-medium">2 People</span></div>
+    <!-- Card 2 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-amber-500/30 transition group">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Nile_Cruise_Egypt.jpg" alt="Nile Cruise" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
+      <div class="p-4 text-center">
+        <h3 class="text-xl font-bold text-amber-500 mb-2">Nile Cruise</h3>
+        <div class="flex justify-center gap-6 text-sm text-gray-700 mb-4">
+          <div>💰 <span class="text-amber-500 font-semibold">EGP 2200</span></div>
+          <div>👥 <span class="font-medium">2 People</span></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Card 3 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Burj_Khalifa.jpg" alt="Dubai Skyline" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Dubai Skyline</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">AED 250</span></div>
-        <div>👥 <span class="text-white font-medium">5 People</span></div>
+    <!-- Card 3 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-amber-500/30 transition group">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Egyptian_Food_Tour.jpg" alt="Food Tour Cairo" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
+      <div class="p-4 text-center">
+        <h3 class="text-xl font-bold text-amber-500 mb-2">Food Tour Cairo</h3>
+        <div class="flex justify-center gap-6 text-sm text-gray-700 mb-4">
+          <div>💰 <span class="text-amber-500 font-semibold">EGP 950</span></div>
+          <div>👥 <span class="font-medium">3 People</span></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Card 4 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Desert_Safari_Dubai.jpg" alt="Desert Safari" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Desert Safari</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">AED 300</span></div>
-        <div>👥 <span class="text-white font-medium">6 People</span></div>
+    <!-- Card 4 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-amber-500/30 transition group">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Siwa_Oasis_Camp.jpg" alt="Siwa Oasis Camp" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
+      <div class="p-4 text-center">
+        <h3 class="text-xl font-bold text-amber-500 mb-2">Siwa Oasis Camp</h3>
+        <div class="flex justify-center gap-6 text-sm text-gray-700 mb-4">
+          <div>💰 <span class="text-amber-500 font-semibold">EGP 1800</span></div>
+          <div>👥 <span class="font-medium">4 People</span></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Card 5 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Nile_Cruise_Egypt.jpg" alt="Nile Cruise" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Nile Cruise</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">EGP 2200</span></div>
-        <div>👥 <span class="text-white font-medium">2 People</span></div>
+    <!-- Card 5 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-amber-500/30 transition group">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Wekalet_El_Balah.jpg" alt="Wekalet El Balah" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
+      <div class="p-4 text-center">
+        <h3 class="text-xl font-bold text-amber-500 mb-2">Wekalet El Balah</h3>
+        <div class="flex justify-center gap-6 text-sm text-gray-700 mb-4">
+          <div>💰 <span class="text-amber-500 font-semibold">EGP 180</span></div>
+          <div>👥 <span class="font-medium">2 People</span></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Card 6 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Egyptian_Food_Tour.jpg" alt="Food Tour Cairo" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Food Tour Cairo</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">EGP 950</span></div>
-        <div>👥 <span class="text-white font-medium">3 People</span></div>
+    <!-- Card 6 -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-amber-500/30 transition group">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Mansheya_Bazaar.jpg" alt="Souq El Mansheya" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
+      <div class="p-4 text-center">
+        <h3 class="text-xl font-bold text-amber-500 mb-2">Souq El Mansheya</h3>
+        <div class="flex justify-center gap-6 text-sm text-gray-700 mb-4">
+          <div>💰 <span class="text-amber-500 font-semibold">EGP 210</span></div>
+          <div>👥 <span class="font-medium">3 People</span></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Card 7 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Siwa_Oasis_Camp.jpg" alt="Siwa Oasis Camp" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Siwa Oasis Camp</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">EGP 1800</span></div>
-        <div>👥 <span class="text-white font-medium">4 People</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 8 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Masjid_Al_Haram.jpg" alt="Makkah Spiritual Tour" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Makkah Spiritual Tour</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">SAR 300</span></div>
-        <div>👥         <span class="text-white font-medium">3 People</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 9 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Wekalet_El_Balah.jpg" alt="Wekalet El Balah" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Wekalet El Balah</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">EGP 180</span></div>
-        <div>👥 <span class="text-white font-medium">2 People</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Card 10 -->
-  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-yellow-500/30 transition group">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Mansheya_Bazaar.jpg" alt="Souq El Mansheya" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-    <div class="p-4 text-center">
-      <h3 class="text-xl font-bold text-yellow-400 mb-2">Souq El Mansheya</h3>
-      <div class="flex justify-center gap-6 text-sm text-gray-300 mb-4">
-        <div>💰 <span class="text-yellow-400 font-semibold">EGP 210</span></div>
-        <div>👥 <span class="text-white font-medium">3 People</span></div>
-      </div>
-    </div>
   </div>
 </div>
 
 <!-- Footer -->
-<footer class="bg-gray-950 py-12 text-center text-white">
+<footer class="bg-sky-100 py-12 text-center text-gray-700">
   <div class="max-w-6xl mx-auto px-4">
-    
     <!-- Social Icons -->
     <div class="flex justify-center gap-8 mb-6 text-2xl">
-      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition hover:text-yellow-400"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram text-pink-500 hover:text-pink-400 transition hover:text-yellow-400"></i></a>
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook text-blue-500 hover:text-blue-400 transition hover:text-yellow-400"></i></a>
-      <a href="#" aria-label="Telegram"><i class="fab fa-telegram text-cyan-400 hover:text-cyan-300 transition hover:text-yellow-400"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter text-sky-400 hover:text-sky-300 transition hover:text-yellow-400"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fab fa-youtube text-red-500 hover:text-red-400 transition hover:text-yellow-400"></i></a>
+      <a href="#"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition"></i></a>
+      <a href="#"><i class="fab fa-instagram text-pink-500 hover:text-pink-400 transition"></i></a>
+      <a href="#"><i class="fab fa-facebook text-blue-500 hover:text-blue-400 transition"></i></a>
+      <a href="#"><i class="fab fa-telegram text-cyan-400 hover:text-cyan-300 transition"></i></a>
+      <a href="#"><i class="fab fa-twitter text-sky-400 hover:text-sky-300 transition"></i></a>
+      <a href="#"><i class="fab fa-youtube text-red-500 hover:text-red-400 transition"></i></a>
     </div>
 
-    <!-- Legal Text -->
-    <div class="text-sm text-gray-400 leading-relaxed space-y-2">
-      <p>&copy; 2025 <span class="text-yellow-400 font-semibold">Your Company Name</span>. All rights reserved.</p>
-      <p>
-        Website designed by <a href="/admin" class="text-yellow-400 underline hover:text-yellow-300">admin</a>
-      </p>
+    <!-- Legal -->
+    <div class="text-sm text-gray-600 space-y-2">
+      <p>&copy; 2025 <span class="text-amber-500 font-semibold">Your Company Name</span>. All rights reserved.</p>
+      <p>Website designed by <a href="/admin" class="text-amber-500 underline hover:text-amber-400">admin</a></p>
     </div>
   </div>
 
   <!-- Floating Contact Icons -->
-<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-  <!-- Phone Icon -->
-  <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
-    <i class="fas fa-phone text-white text-2xl"></i>
-  </a>
-
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
-    <i class="fab fa-whatsapp text-white text-2xl"></i>
-  </a>
-</div>
-
+  <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+    <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
+      <i class="fas fa-phone text-white text-2xl"></i>
+    </a>
+    <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
+      <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+  </div>
 </footer>
 
-
-  <script src="../js/app.js"></script>
-  <script src="../js/translate.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/translate.js"></script>
 </body>
 </html>

@@ -4,36 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Desert Adventures</title>
-  <!-- Tailwind CSS CDN -->
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome CDN -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Poppins Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body class="bg-gray-950 text-white">
+<body class="bg-sky-50 text-gray-800 font-[Poppins]">
 
 <!-- Navbar -->
-<nav class="bg-gray-900 shadow-lg fixed w-full top-0 z-50">
+<nav class="bg-white shadow-lg fixed w-full top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
-        <!-- Logo -->
-      <div class="flex-shrink-0 text-yellow-400 text-xl sm:text-2xl font-semibold">
+      <!-- Logo -->
+      <div class="flex-shrink-0 text-amber-500 text-xl sm:text-2xl font-semibold">
         Tour & Safari
       </div>
 
       <!-- Navigation Links -->
       <div class="hidden md:flex items-center space-x-4 text-sm lg:text-base">
-        <a href="index.html" class="hover:text-yellow-400" data-key="home">Home</a>
-        <a href="about.html" class="hover:text-yellow-400" data-key="about">About</a>
-        <a href="contact.html" class="hover:text-yellow-400" data-key="contact">Contact</a>
-        <a href="dest.html" class="hover:text-yellow-400" data-key="destinations">Destinations</a>
-        <a href="blogs.html" class="hover:text-yellow-400" data-key="blogs">Blogs </a>
+        <a href="index.html" class="hover:text-amber-500" data-key="home">Home</a>
+        <a href="about.html" class="hover:text-amber-500" data-key="about">About</a>
+        <a href="contact.html" class="hover:text-amber-500" data-key="contact">Contact</a>
+        <a href="dest.html" class="hover:text-amber-500" data-key="destinations">Destinations</a>
+        <a href="blogs.html" class="hover:text-amber-500" data-key="blogs">Blogs</a>
       </div>
 
       <!-- Language & CTA -->
@@ -42,44 +40,42 @@
           <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5 cursor-pointer" id="lang-en">
           <img src="https://flagcdn.com/w20/de.png" alt="German" class="w-5 h-5 cursor-pointer" id="lang-de">
         </div>
-        <a href="#booking" class="bg-yellow-500 text-gray-900 font-semibold py-1 px-3 rounded hover:bg-yellow-400 transition text-xs sm:text-sm hidden md:inline-block">
+        <a href="#booking" class="bg-amber-500 text-white font-semibold py-1 px-3 rounded hover:bg-amber-400 transition text-xs sm:text-sm hidden md:inline-block">
           Book Now
         </a>
       </div>
-
     </div>
   </div>
 </nav>
 
-  <!-- ✅ Main Content -->
-  <main class="pt-16 pb-12 px-4 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<!-- Main Content -->
+<main class="pt-24 pb-16 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
-    <!-- 🟨 Sidebar – Latest Articles -->
-    <aside class="md:col-span-1 space-y-4">
-      <h3 class="text-xl font-semibold text-yellow-400 mb-2">Latest Articles</h3>
-      <a href="dune-bashing.html" class="block bg-gray-800 hover:bg-yellow-500 hover:text-gray-900 transition px-4 py-2 rounded">Dune Bashing</a>
-      <a href="siwa-article.html" class="block bg-gray-800 hover:bg-yellow-500 hover:text-gray-900 transition px-4 py-2 rounded">Siwa Article</a>
-    </aside>
+  <!-- Sidebar – Latest Articles -->
+  <aside class="md:col-span-1 space-y-4">
+    <h3 class="text-xl font-semibold text-amber-500 mb-2">Latest Articles</h3>
+    <a href="dune-bashing.html" class="block bg-white hover:bg-amber-500 hover:text-white transition px-4 py-2 rounded shadow-sm">Dune Bashing</a>
+    <a href="siwa-article.html" class="block bg-white hover:bg-amber-500 hover:text-white transition px-4 py-2 rounded shadow-sm">Siwa Article</a>
+  </aside>
 
-    <!-- 🟦 Main Article Section -->
-<section class="md:col-span-3">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirvgToBUbAX0VoMUabdBmT2eHTmI7fVaB9g&s" alt="Sahara Desert Morocco" class="w-full h-64 object-cover rounded-lg shadow-lg mb-6" />
-  <h2 class="text-3xl font-bold text-yellow-400 mb-4">Sahara Desert: Journey into the Infinite</h2>
-  <p class="text-gray-300 text-lg mb-6">
-    The Sahara Desert is a vast sea of golden dunes stretching across North Africa. In Morocco, travelers can embark on unforgettable journeys through this majestic landscape, riding camels across the sand and camping under star-filled skies.
-  </p>
-  <p class="text-gray-300 text-lg mb-6">
-    A typical Sahara tour includes visits to Berber villages, traditional music around the campfire, and sunrise treks over the dunes. The silence of the desert, broken only by the wind, creates a sense of peace and wonder that’s hard to find elsewhere.
-  </p>
-  <p class="text-gray-300 text-lg">
-    Whether you're exploring the dramatic Erg Chebbi dunes or discovering ancient caravan routes, the Sahara offers a timeless adventure. It’s a place to disconnect, reflect, and reconnect with nature in its purest form.
-  </p>
-</section>
+  <!-- Main Article Section -->
+  <section class="md:col-span-3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirvgToBUbAX0VoMUabdBmT2eHTmI7fVaB9g&s" alt="Sahara Desert Morocco" class="w-full h-64 object-cover rounded-lg shadow-lg mb-6" />
+    <h2 class="text-3xl font-bold text-amber-500 mb-4">Sahara Desert: Journey into the Infinite</h2>
+    <p class="text-gray-700 text-lg mb-6">
+      The Sahara Desert is a vast sea of golden dunes stretching across North Africa. In Morocco, travelers can embark on unforgettable journeys through this majestic landscape, riding camels across the sand and camping under star-filled skies.
+    </p>
+    <p class="text-gray-700 text-lg mb-6">
+      A typical Sahara tour includes visits to Berber villages, traditional music around the campfire, and sunrise treks over the dunes. The silence of the desert, broken only by the wind, creates a sense of peace and wonder that’s hard to find elsewhere.
+    </p>
+    <p class="text-gray-700 text-lg">
+      Whether you're exploring the dramatic Erg Chebbi dunes or discovering ancient caravan routes, the Sahara offers a timeless adventure. It’s a place to disconnect, reflect, and reconnect with nature in its purest form.
+    </p>
+  </section>
+</main>
 
-  </main>
-
-<!-- footer -->
-<footer class="bg-gray-950 py-12 text-center text-white">
+<!-- Footer -->
+<footer class="bg-sky-100 py-12 text-center text-gray-700">
   <div class="max-w-6xl mx-auto px-4">
     
     <!-- Social Icons -->
@@ -93,28 +89,26 @@
     </div>
 
     <!-- Legal Text -->
-    <div class="text-sm text-gray-400 leading-relaxed space-y-2">
-      <p>&copy; 2025 <span class="text-yellow-400 font-semibold">Your Company Name</span>. All rights reserved.</p>
+    <div class="text-sm text-gray-600 leading-relaxed space-y-2">
+      <p>&copy; 2025 <span class="text-amber-500 font-semibold">Your Company Name</span>. All rights reserved.</p>
       <p>
-        Website designed by <a href="/admin" class="text-yellow-400 underline hover:text-yellow-300">admin</a>
+        Website designed by <a href="/admin" class="text-amber-500 underline hover:text-amber-400">admin</a>
       </p>
     </div>
   </div>
 
+  <!-- Floating Contact Icons -->
+  <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+    <!-- Phone Icon -->
+    <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
+      <i class="fas fa-phone text-white text-2xl"></i>
+    </a>
 
-<!-- Floating Contact Icons -->
-<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-  <!-- Phone Icon -->
-  <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
-    <i class="fas fa-phone text-white text-2xl"></i>
-  </a>
-
-  <!-- WhatsApp Icon -->
-  <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
-    <i class="fab fa-whatsapp text-white text-2xl"></i>
-  </a>
-</div>
-
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
+      <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+  </div>
 </footer>
 
 </body>
