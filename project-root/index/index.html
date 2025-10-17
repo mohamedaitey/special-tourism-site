@@ -7,25 +7,96 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Fade effects */
+    .fade-up {
+      animation: fadeUp 1s ease-in-out;
+    }
+
+    .fade-down {
+      animation: fadeDown 1s ease-in-out;
+    }
+
+    @keyframes fadeUp {
+      0% {opacity: 0; transform: translateY(40px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeDown {
+      0% {opacity: 0; transform: translateY(-40px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Hero text */
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-in-out forwards;
+    }
+
+    .animate-fadeInUpDelay {
+      animation: fadeInUp 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(40px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Pulse effect */
+    .animate-pulse-slow {
+      animation: pulseSlow 2.5s infinite;
+    }
+
+    @keyframes pulseSlow {
+      0%, 100% {opacity: 1;}
+      50% {opacity: 0.7;}
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Navbar scroll effect */
+    .navbar-scrolled {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      backdrop-filter: blur(6px);
+      transition: 0.3s ease;
+    }
+  </style>
 </head>
-<body class="bg-sky-50 text-gray-800 font-[Poppins]">
+
+<body class="bg-sky-50 text-gray-800 overflow-x-hidden">
 
 <!-- Navbar -->
-<nav class="bg-white shadow-lg fixed w-full top-0 z-50 text-gray-800">
+<nav id="navbar" class="bg-white shadow-lg fixed w-full top-0 z-50 text-gray-800 fade-down">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <div class="flex-shrink-0 text-amber-500 text-xl sm:text-2xl font-semibold">Tour & Safari</div>
       <div class="hidden md:flex items-center space-x-4 text-sm lg:text-base">
         <a href="index.html" class="hover:text-amber-500">Home</a>
-        <a href="dest.html" class="hover:text-amber-500">Destinations</a>
-        <a href="blogs.html" class="hover:text-amber-500">Blogs</a>
         <a href="about.html" class="hover:text-amber-500">About</a>
         <a href="contact.html" class="hover:text-amber-500">Contact</a>
+        <a href="dest.html" class="hover:text-amber-500">Destinations</a>
+        <a href="blogs.html" class="hover:text-amber-500">Blogs</a>
       </div>
       <div class="flex items-center gap-3">
         <div class="flex gap-2">
-          <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5 cursor-pointer" id="lang-en">
-          <img src="https://flagcdn.com/w20/de.png" alt="German" class="w-5 h-5 cursor-pointer" id="lang-de">
+          <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5 cursor-pointer">
+          <img src="https://flagcdn.com/w20/de.png" alt="German" class="w-5 h-5 cursor-pointer">
         </div>
         <a href="#booking" class="bg-amber-500 text-white font-semibold py-1 px-3 rounded hover:bg-amber-400 transition text-xs sm:text-sm hidden md:inline-block">Book Now</a>
       </div>
@@ -34,27 +105,28 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center text-center">
-  <div id="hero-bg" class="absolute inset-0 bg-cover bg-center transition-all duration-1000"></div>
-  <div class="relative z-10">
-    <h1 class="text-4xl md:text-6xl font-bold uppercase">DISCOVER THE WORLD WITH US</h1>
-    <p class="mt-4 text-lg md:text-xl">Explore breathtaking destinations and unforgettable adventures.</p>
+<section class="relative h-screen flex items-center justify-center text-center hero-section">
+  <div id="hero-bg" class="absolute inset-0 bg-cover bg-center transition-all duration-1000"
+       style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=60');"></div>
+  <div class="relative z-10 text-white px-4 fade-up">
+    <h1 class="text-4xl md:text-6xl font-bold uppercase mb-4 animate-fadeInUp">DISCOVER THE WORLD WITH US</h1>
+    <p class="mt-2 text-lg md:text-xl animate-fadeInUpDelay">Explore breathtaking destinations and unforgettable adventures.</p>
   </div>
 </section>
 
 <!-- Our Top Experiences -->
-<section class="py-16 text-center">
-  <h2 class="text-amber-500 text-3xl font-bold mb-8">OUR TOP EXPERIENCES</h2>
+<section class="py-16 text-center reveal">
+  <h2 class="text-amber-500 text-3xl font-bold mb-8 animate-pulse-slow">OUR TOP EXPERIENCES</h2>
   <div class="grid md:grid-cols-3 gap-6 px-6">
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-amber-400/30 transition duration-500">
       <h3 class="text-amber-500 text-xl font-semibold mb-2">Luxury Safari</h3>
       <p>Experience the wild with top comfort and style.</p>
     </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-amber-400/30 transition duration-500">
       <h3 class="text-amber-500 text-xl font-semibold mb-2">Cultural Tours</h3>
       <p>Immerse yourself in rich traditions and local history.</p>
     </div>
-    <div class="bg-white p-6 rounded-lg shadow-md">
+    <div class="bg-white p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-amber-400/30 transition duration-500">
       <h3 class="text-amber-500 text-xl font-semibold mb-2">Adventure Trips</h3>
       <p>Get your adrenaline pumping with exciting activities.</p>
     </div>
@@ -62,82 +134,82 @@
 </section>
 
 <!-- Booking Section -->
-<section id="booking" class="py-16 px-4 bg-sky-50 text-gray-800">
+<section id="booking" class="py-16 px-4 bg-sky-50 text-gray-800 reveal">
   <h2 class="text-3xl font-bold text-center mb-12">Choose Your Destination</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-    <!-- Egypt Card -->
-    <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-amber-500/30 transition">
-      <img src="https://cdn2.wingie.com/uploads/f_webp,s_825x620,q_60,fit_cover/alahramat_msr_a7acd11ef6.jpg" alt="Egypt" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+    <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-amber-500/30 transition duration-700 hover:-translate-y-2">
+      <img src="https://cdn2.wingie.com/uploads/f_webp,s_825x620,q_60,fit_cover/alahramat_msr_a7acd11ef6.jpg" alt="Egypt" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700" />
       <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition"></div>
-      <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
+      <div class="absolute bottom-0 left-0 right-0 p-4 text-center text-white">
         <h3 class="text-2xl font-bold text-amber-500 mb-2">Egypt</h3>
-        <a href="egypt.html" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">Explore</a>
+        <a href="#" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">Explore</a>
       </div>
     </div>
 
-    <!-- Saudi Arabia Card -->
-    <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-amber-500/30 transition">
-      <img src="https://cdn.britannica.com/37/135437-050-A12461CC/Burj-Khalifa-world-Sheikh-Khalifah-ibn-Zayid-2010.jpg" alt="Saudi Arabia" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+    <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-amber-500/30 transition duration-700 hover:-translate-y-2">
+      <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=60" alt="Saudi Arabia" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700" />
       <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition"></div>
-      <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
+      <div class="absolute bottom-0 left-0 right-0 p-4 text-center text-white">
         <h3 class="text-2xl font-bold text-amber-500 mb-2">Saudi Arabia</h3>
-        <a href="saudi.html" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">Explore</a>
+        <a href="#" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">Explore</a>
       </div>
     </div>
 
-    <!-- UAE Card -->
-    <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-amber-500/30 transition">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAgeHGJN25cS3Akv5_0X_7Q_MU2d625qzQVQ&s" alt="UAE" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500" />
+    <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-amber-500/30 transition duration-700 hover:-translate-y-2">
+      <img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=800&q=60" alt="UAE" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-700" />
       <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition"></div>
-      <div class="absolute bottom-0 left-0 right-0 p-4 text-center">
+      <div class="absolute bottom-0 left-0 right-0 p-4 text-center text-white">
         <h3 class="text-2xl font-bold text-amber-500 mb-2">UAE</h3>
-        <a href="uae.html" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">Explore</a>
+        <a href="#" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">Explore</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Final Call -->
-<section class="py-12 text-center">
-  <h2 class="text-amber-500 text-4xl font-bold uppercase">YOUR JOURNEY STARTS HERE</h2>
+<section class="py-12 text-center reveal">
+  <h2 class="text-amber-500 text-4xl font-bold uppercase animate-pulse-slow">YOUR JOURNEY STARTS HERE</h2>
 </section>
+
 <!-- Footer -->
-<footer class="bg-sky-100 py-12 text-center text-gray-700">
+<footer class="bg-sky-100 py-12 text-center text-gray-700 fade-up">
   <div class="max-w-6xl mx-auto px-4">
-    
-    <!-- Social Icons -->
     <div class="flex justify-center gap-8 mb-6 text-2xl">
-      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram text-pink-500 hover:text-pink-400 transition"></i></a>
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook text-blue-500 hover:text-blue-400 transition"></i></a>
-      <a href="#" aria-label="Telegram"><i class="fab fa-telegram text-cyan-400 hover:text-cyan-300 transition"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter text-sky-400 hover:text-sky-300 transition"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fab fa-youtube text-red-500 hover:text-red-400 transition"></i></a>
+      <a href="#"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition"></i></a>
+      <a href="#"><i class="fab fa-instagram text-pink-500 hover:text-pink-400 transition"></i></a>
+      <a href="#"><i class="fab fa-facebook text-blue-500 hover:text-blue-400 transition"></i></a>
+      <a href="#"><i class="fab fa-telegram text-cyan-400 hover:text-cyan-300 transition"></i></a>
+      <a href="#"><i class="fab fa-twitter text-sky-400 hover:text-sky-300 transition"></i></a>
+      <a href="#"><i class="fab fa-youtube text-red-500 hover:text-red-400 transition"></i></a>
     </div>
-
-    <!-- Legal Text -->
-    <div class="text-sm text-gray-600 leading-relaxed space-y-2">
-      <p>&copy; 2025 <span class="text-amber-500 font-semibold">Your Company Name</span>. All rights reserved.</p>
-      <p>
-        Website designed by <a href="/admin" class="text-amber-500 underline hover:text-amber-400">admin</a>
-      </p>
-    </div>
-  </div>
-
-  <!-- Floating Contact Icons -->
-  <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-    <!-- Phone Icon -->
-    <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
-      <i class="fas fa-phone text-white text-2xl"></i>
-    </a>
-
-    <!-- WhatsApp Icon -->
-    <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
-      <i class="fab fa-whatsapp text-white text-2xl"></i>
-    </a>
+    <p class="text-sm text-gray-600">&copy; 2025 <span class="text-amber-500 font-semibold">Your Company Name</span>. All rights reserved.</p>
   </div>
 </footer>
 
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll(".reveal");
+  window.addEventListener("scroll", () => {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const revealTop = reveals[i].getBoundingClientRect().top;
+      const revealPoint = 100;
+      if (revealTop < windowHeight - revealPoint) {
+        reveals[i].classList.add("active");
+      }
+    }
+  });
+
+  // Navbar scroll effect
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add("navbar-scrolled");
+    } else {
+      navbar.classList.remove("navbar-scrolled");
+    }
+  });
+</script>
 <!-- Scripts -->
 <script src="../js/app.js"></script>
 <script src="../js/translate.js"></script>

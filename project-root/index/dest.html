@@ -5,44 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top Destinations</title>
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Poppins Font -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; }
+
+    /* Fade-in on load */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero Image animation */
+    .hero-img {
+      animation: zoomHero 12s ease-in-out infinite alternate;
+    }
+    @keyframes zoomHero {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+
+    /* Card hover effect */
+    .card {
+      transition: transform 0.6s ease, box-shadow 0.4s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 15px 30px rgba(255, 191, 0, 0.25);
+    }
+
+    .card img {
+      transition: transform 0.8s ease;
+    }
+    .card:hover img {
+      transform: scale(1.1) rotate(1deg);
+    }
+
+    /* Button animation */
+    .shine-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .shine-btn::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+      animation: shine 3s infinite;
+    }
+    @keyframes shine {
+      0% { left: -100%; }
+      50% { left: 100%; }
+      100% { left: 100%; }
+    }
+  </style>
 </head>
 
-<body class="bg-sky-50 text-gray-800 font-[Poppins]">
+<body class="bg-sky-50 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50 fade-in" style="animation-delay: 0.2s;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
 
-        <!-- Logo -->
         <div class="flex-shrink-0 text-amber-500 text-xl sm:text-2xl font-semibold">
           Tour & Safari
         </div>
 
-        <!-- Links -->
         <div class="hidden md:flex items-center space-x-4 text-sm lg:text-base">
-          <a href="index.html" class="hover:text-amber-500" data-key="home">Home</a>
-          <a href="about.html" class="hover:text-amber-500" data-key="about">About</a>
-          <a href="contact.html" class="hover:text-amber-500" data-key="contact">Contact</a>
-          <a href="dest.html" class="hover:text-amber-500" data-key="destinations">Destinations</a>
-          <a href="blogs.html" class="hover:text-amber-500" data-key="blogs">Blogs</a>
+          <a href="index.html" class="hover:text-amber-500">Home</a>
+          <a href="about.html" class="hover:text-amber-500">About</a>
+          <a href="contact.html" class="hover:text-amber-500">Contact</a>
+          <a href="dest.html" class="hover:text-amber-500">Destinations</a>
+          <a href="blogs.html" class="hover:text-amber-500">Blogs</a>
         </div>
 
-        <!-- Flags + CTA -->
         <div class="flex items-center gap-3">
           <div class="flex gap-2">
-            <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5 cursor-pointer" id="lang-en">
-            <img src="https://flagcdn.com/w20/de.png" alt="German" class="w-5 h-5 cursor-pointer" id="lang-de">
+            <img src="https://flagcdn.com/w20/gb.png" class="w-5 h-5 cursor-pointer" alt="English">
+            <img src="https://flagcdn.com/w20/de.png" class="w-5 h-5 cursor-pointer" alt="German">
           </div>
-          <a href="#" class="bg-amber-500 text-white font-semibold py-1 px-3 rounded hover:bg-amber-400 transition text-xs sm:text-sm hidden md:inline-block">
+          <a href="#" class="shine-btn bg-amber-500 text-white font-semibold py-1 px-3 rounded hover:bg-amber-400 transition text-xs sm:text-sm hidden md:inline-block">
             Book Now
           </a>
         </div>
@@ -52,92 +111,77 @@
   </nav>
 
   <!-- Hero -->
-  <section class="relative h-[70vh] flex items-center justify-center text-center overflow-hidden mt-16">
+  <section class="relative h-[70vh] flex items-center justify-center text-center overflow-hidden mt-16 fade-in" style="animation-delay: 0.4s;">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTucXJqfTWg7whiAHsNHZzAWsuNGmZGmsfvDg&s"
          alt="Destinations"
-         class="absolute inset-0 w-full h-full object-cover opacity-60" />
-    <div class="relative z-10">
-      <h1 class="text-4xl sm:text-5xl font-bold text-amber-500 mb-4">Top Tourist Destinations</h1>
-      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-800 font-medium">
-        Explore the most iconic places across Egypt, Saudi Arabia, and the UAE—where history, luxury, and adventure meet.
+         class="absolute inset-0 w-full h-full object-cover opacity-70 hero-img" />
+    <div class="relative z-10 px-4">
+      <h1 class="text-5xl sm:text-6xl font-bold text-amber-500 drop-shadow-lg mb-4">Top Tourist Destinations</h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-800 font-medium bg-white bg-opacity-60 rounded-lg p-3">
+        Explore the most iconic places across Egypt, Saudi Arabia, and the UAE — where history, luxury, and adventure meet.
       </p>
     </div>
   </section>
 
-  <!-- Destination Cards -->
-  <section class="py-20 px-4 max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Cards -->
+  <section class="py-20 px-4 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-      <!-- Egypt -->
-      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-amber-200 transition group">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3lrw8fK31Z1BK5YmfmG12jMm16CDiH9Vk2g&s" alt="Egypt"
-             class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" />
-        <div class="p-5 text-center">
-          <h3 class="text-2xl font-bold text-amber-500 mb-2">Egypt</h3>
-          <p class="text-gray-600 mb-4 text-sm">From the pyramids to the Red Sea, Egypt offers timeless wonders and vibrant culture.</p>
-          <a href="egypt.html" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">View Details</a>
-        </div>
+    <!-- Egypt -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg fade-in" style="animation-delay: 0.6s;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3lrw8fK31Z1BK5YmfmG12jMm16CDiH9Vk2g&s" alt="Egypt" class="w-full h-64 object-cover" />
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-bold text-amber-500 mb-2">Egypt</h3>
+        <p class="text-gray-600 mb-4 text-sm">From the pyramids to the Red Sea, Egypt offers timeless wonders and vibrant culture.</p>
+        <a href="egypt.html" class="shine-btn bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">View Details</a>
       </div>
-
-      <!-- Saudi Arabia -->
-      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-amber-200 transition group">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5yeZWBwCCTexwbitBtVqjlnVRyNWwFH4lEw&s" alt="Saudi Arabia"
-             class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" />
-        <div class="p-5 text-center">
-          <h3 class="text-2xl font-bold text-amber-500 mb-2">Saudi Arabia</h3>
-          <p class="text-gray-600 mb-4 text-sm">Discover ancient cities, desert adventures, and modern marvels in the Kingdom.</p>
-          <a href="saudi.html" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">View Details</a>
-        </div>
-      </div>
-
-      <!-- UAE -->
-      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-amber-200 transition group">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS19CJ_bH_SsjlAbhkQx7XjcUuaNfKdElb34A&s" alt="UAE"
-             class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" />
-        <div class="p-5 text-center">
-          <h3 class="text-2xl font-bold text-amber-500 mb-2">UAE</h3>
-          <p class="text-gray-600 mb-4 text-sm">Experience futuristic cities, luxury resorts, and thrilling desert safaris.</p>
-          <a href="uae.html" class="inline-block bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">View Details</a>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Saudi Arabia -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg fade-in" style="animation-delay: 0.8s;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5yeZWBwCCTexwbitBtVqjlnVRyNWwFH4lEw&s" alt="Saudi Arabia" class="w-full h-64 object-cover" />
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-bold text-amber-500 mb-2">Saudi Arabia</h3>
+        <p class="text-gray-600 mb-4 text-sm">Discover ancient cities, desert adventures, and modern marvels in the Kingdom.</p>
+        <a href="saudi.html" class="shine-btn bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">View Details</a>
+      </div>
+    </div>
+
+    <!-- UAE -->
+    <div class="card bg-white rounded-lg overflow-hidden shadow-lg fade-in" style="animation-delay: 1s;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS19CJ_bH_SsjlAbhkQx7XjcUuaNfKdElb34A&s" alt="UAE" class="w-full h-64 object-cover" />
+      <div class="p-6 text-center">
+        <h3 class="text-2xl font-bold text-amber-500 mb-2">UAE</h3>
+        <p class="text-gray-600 mb-4 text-sm">Experience futuristic cities, luxury resorts, and thrilling desert safaris.</p>
+        <a href="uae.html" class="shine-btn bg-amber-500 text-white font-semibold py-2 px-6 rounded hover:bg-amber-400 transition">View Details</a>
+      </div>
+    </div>
+
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white py-12 text-center text-gray-800 shadow-inner">
+  <footer class="bg-white py-12 text-center text-gray-800 shadow-inner fade-in" style="animation-delay: 1.2s;">
     <div class="max-w-6xl mx-auto px-4">
-
-      <!-- Social Icons -->
       <div class="flex justify-center gap-8 mb-6 text-2xl">
-        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram text-pink-500 hover:text-pink-400 transition"></i></a>
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook text-blue-500 hover:text-blue-400 transition"></i></a>
-        <a href="#" aria-label="Telegram"><i class="fab fa-telegram text-cyan-400 hover:text-cyan-300 transition"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter text-sky-400 hover:text-sky-300 transition"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fab fa-youtube text-red-500 hover:text-red-400 transition"></i></a>
+        <a href="#"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition"></i></a>
+        <a href="#"><i class="fab fa-instagram text-pink-500 hover:text-pink-400 transition"></i></a>
+        <a href="#"><i class="fab fa-facebook text-blue-500 hover:text-blue-400 transition"></i></a>
+        <a href="#"><i class="fab fa-telegram text-cyan-400 hover:text-cyan-300 transition"></i></a>
+        <a href="#"><i class="fab fa-twitter text-sky-400 hover:text-sky-300 transition"></i></a>
+        <a href="#"><i class="fab fa-youtube text-red-500 hover:text-red-400 transition"></i></a>
       </div>
-
-      <!-- Legal -->
-      <div class="text-sm text-gray-600 leading-relaxed space-y-2">
-        <p>&copy; 2025 <span class="text-amber-500 font-semibold">Your Company Name</span>. All rights reserved.</p>
-        <p>Website designed by <a href="/admin" class="text-amber-500 underline hover:text-amber-400">admin</a></p>
-      </div>
+      <p class="text-sm text-gray-600">&copy; 2025 <span class="text-amber-500 font-semibold">Tour & Safari</span>. All rights reserved.</p>
     </div>
 
-    <!-- Floating Contact Icons -->
+    <!-- Floating Contact -->
     <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-      <!-- Phone -->
       <a href="tel:+201234567890" class="bg-blue-500 hover:bg-blue-400 p-4 rounded-full shadow-lg animate-bounce transition duration-300">
         <i class="fas fa-phone text-white text-2xl"></i>
       </a>
-
-      <!-- WhatsApp -->
       <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 hover:bg-green-400 p-4 rounded-full shadow-lg animate-pulse transition duration-300">
         <i class="fab fa-whatsapp text-white text-2xl"></i>
       </a>
     </div>
-
   </footer>
+
 </body>
 </html>

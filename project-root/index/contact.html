@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us</title>
+  <title>Contact Us</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -11,11 +11,48 @@
   <!-- Font & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(1.1); opacity: 0.8; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-4px); }
+      50% { transform: translateX(4px); }
+      75% { transform: translateX(-4px); }
+    }
+
+    .animate-fadeUp { animation: fadeInUp 1s ease-out; }
+    .animate-zoomIn { animation: zoomIn 2s ease-out forwards; }
+    .hover-shake:hover { animation: shake 0.3s ease-in-out; }
+
+    /* Smooth fade when hovering over form */
+    form textarea:hover, form input:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease;
+    }
+
+    form textarea, form input {
+      transition: all 0.4s ease;
+    }
+  </style>
 </head>
-<body class="bg-sky-50 text-gray-800 font-[Poppins]">
+
+<body class="bg-sky-50 text-gray-800">
 
 <!-- Navbar -->
-<nav class="bg-white shadow-lg fixed w-full top-0 z-50 text-gray-800">
+<nav class="bg-white shadow-lg fixed w-full top-0 z-50 text-gray-800 animate-fadeUp">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <div class="flex-shrink-0 text-amber-500 text-xl sm:text-2xl font-semibold">Tour & Safari</div>
@@ -37,36 +74,39 @@
   </div>
 </nav>
 
-<!-- Main Section with Image and Text -->
+<!-- Hero Section -->
 <section class="relative h-72 md:h-96 overflow-hidden mt-16">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTHI98uSJyLPY7WDJaHEehJ-5Vjz8Vv9m7Hw&s" alt="Contact Travel" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTHI98uSJyLPY7WDJaHEehJ-5Vjz8Vv9m7Hw&s" 
+       alt="Contact Travel" 
+       class="absolute inset-0 w-full h-full object-cover opacity-70 animate-zoomIn" />
   <div class="relative z-10 flex items-center justify-center h-full text-center px-4">
-    <div>
+    <div class="animate-fadeUp">
       <h2 class="text-4xl font-bold text-amber-500 mb-4">Let’s Get You Moving</h2>
       <p class="text-gray-800 text-lg max-w-xl mx-auto bg-white bg-opacity-70 p-4 rounded-lg">
-        Whether you're heading to Alexandria or planning a desert escape, our team is ready to assist you. Reach out and let’s make your journey smooth and unforgettable.
+        Whether you're heading to Alexandria or planning a desert escape, our team is ready to assist you. 
+        Reach out and let’s make your journey smooth and unforgettable.
       </p>
     </div>
   </div>
 </section>
 
 <!-- Contact Form -->
-<section class="py-12 px-4 max-w-4xl mx-auto">
+<section class="py-12 px-4 max-w-4xl mx-auto animate-fadeUp">
   <form class="bg-white p-8 rounded-xl shadow-md space-y-6">
 
-    <textarea placeholder="Write your message..." class="w-full h-40 p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 resize-none transition duration-300 hover:scale-105 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+    <textarea placeholder="Write your message..." class="w-full h-40 p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 resize-none hover-shake focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
 
-    <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 transition duration-300 hover:rotate-1 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500" />
+    <input type="text" placeholder="Your Name" class="w-full p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 hover-shake focus:outline-none focus:ring-2 focus:ring-amber-500" />
 
     <div class="flex gap-4">
-      <input type="text" placeholder="+20" class="w-1/4 p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 transition duration-300 hover:translate-x-1 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500" />
-      <input type="text" placeholder="Phone Number" class="w-3/4 p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 transition duration-300 hover:scale-105 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500" />
+      <input type="text" placeholder="+20" class="w-1/4 p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 hover-shake focus:outline-none focus:ring-2 focus:ring-amber-500" />
+      <input type="text" placeholder="Phone Number" class="w-3/4 p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 hover-shake focus:outline-none focus:ring-2 focus:ring-amber-500" />
     </div>
 
-    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 transition duration-300 hover:-translate-y-1 hover:bg-sky-200 focus:outline-none focus:ring-2 focus:ring-amber-500" />
+    <input type="email" placeholder="Email Address" class="w-full p-4 rounded-lg bg-sky-100 text-gray-800 placeholder-gray-500 hover-shake focus:outline-none focus:ring-2 focus:ring-amber-500" />
 
     <div class="flex justify-center mt-8">
-      <a href="#" class="inline-block text-white font-bold px-10 py-5 rounded-xl shadow-lg text-lg transition-all duration-300 hover:scale-105 bg-amber-500 hover:bg-amber-400">
+      <a href="#" class="inline-block text-white font-bold px-10 py-5 rounded-xl shadow-lg text-lg transition-all duration-300 hover:scale-105 bg-amber-500 hover:bg-amber-400 hover-shake">
         Submit
       </a>
     </div>
@@ -75,7 +115,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-sky-100 py-12 text-center text-gray-700 mt-20">
+<footer class="bg-sky-100 py-12 text-center text-gray-700 mt-20 animate-fadeUp">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-center gap-8 mb-6 text-2xl">
       <a href="#"><i class="fab fa-whatsapp text-green-500 hover:text-green-400 transition"></i></a>
@@ -101,6 +141,7 @@
     </a>
   </div>
 </footer>
+
 
 <!-- Scripts -->
 <script src="../js/app.js"></script>
